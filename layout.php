@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-if (isset($_SESSION['username']) && isset($_SESSION['password']) && isset($_SESSION['dept'])) {
+if (isset($_SESSION['username']) && isset($_SESSION['password']) && isset($_SESSION['full_name']) && isset($_SESSION['dept'])) {
 
  if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   if (isset($_POST['logout'])) {
@@ -68,7 +68,7 @@ if (isset($_SESSION['username']) && isset($_SESSION['password']) && isset($_SESS
      <div class="user-panel pb-3 mb-3 d-flex">
       <div class="info">
        <a href="#" class="d-block">
-        <?php echo $_SESSION['username']; ?>
+        <?php echo $_SESSION['full_name']; ?>
        </a>
       </div>
      </div>
